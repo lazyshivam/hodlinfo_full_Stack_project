@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HodlInfo</title>
+    <script src="https://kit.fontawesome.com/1285067d34.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="logo">
+                <img src="./image/HODLINFO_white.8f78fc06.png" width="250px" alt="logo" srcset="">
+            </div>
+            <div class="middle">
+                <div class="dropdown">
+                    <select name="currency" id="currency">
+                        <option value="inr">INR</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select name="crypto" id="crypto">
+                        <option value="btc">BTC</option>
+                        <option value="eth">ETH</option>
+                        <option value="xrp">XRP</option>
+                        <option value="trx">TRX</option>
+                        <option value="eos">EOS</option>
+                        <option value="zil">ZIL</option>
+                        <option value="bat">BAT</option>
+                        <option value="zrx">ZRX</option>
+                        <option value="req">REQ</option>
+                        <option value="nuls">NULS</option>
+
+                        <!-- Add more cryptocurrency options -->
+                    </select>
+                </div>
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="right">
+                <div class="timer">
+                    <div class="circle"></div>
+                    <span id="timer" style="width: 20px  ;">60</span>
+                </div>
+                <button class="telegram-button"><i class="fa-solid  fa-paper-plane"
+                        style="margin-right: 10px; "></i>Connect to Telegram</button>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </header>
+        <div class="realStates">
+
+            <span class="utilityClass1">2.34% <br> <span class="utilityClass2">5 Min</span></span>
+            <span class="utilityClass1">5.34% <br> <span class="utilityClass2">1 hour</span></span>
+
+            <div class="bestPriceToTrade">
+                <h1 style="color:#b6b6b6;">Best Price to Trade</h1>
+                <span style="font-size: 25px;font-weight: 700;">₹ 24,65,686</span>
+                <p class="utilityClass2" style="margin-top: 7px;">Average BTC/INR net price including commission</p>
+            </div>
+
+            <span class="utilityClass1">7.34% <br> <span class="utilityClass2">1 Day</span></span>
+            <span class="utilityClass1">17.34% <br><span class="utilityClass2">7Days</span></span>
+
+        </div>
+        <div id="cryptoData"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

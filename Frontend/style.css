@@ -1,0 +1,277 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color:black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* body.dark{
+    background-color: black;
+    color:white
+} */
+.main{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+
+
+
+/* css for header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3cc6c0;
+    padding: 10px 20px;
+}
+@media screen and (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right{
+       margin: 20px;
+    }
+}
+
+
+
+.middle{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+/* Styling for the dropdowns */
+.dropdown {
+    position: relative;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: 400;
+    
+}
+
+.dropdown select {
+    padding: 8px 20px;
+    border: none;
+    background-color: #e5e5e5;
+    color: black;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 400;
+}
+
+/* Styling for the buy button */
+.buy-button {
+    padding: 8px 20px;
+    background-color: #e5e5e5;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: larger;
+    font-weight: 400;
+}
+
+/* Styling for the timer */
+.timer {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Styling for the Telegram button */
+.telegram-button {
+    padding: 12px 20px;
+    background-color: #3cc6c0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Styling for the dark mode toggle */
+.switch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+    width:60px;
+    height: 33px;
+    
+    
+    
+}
+
+.switch input{
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e2e2; /* Background color for the switch */
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #3cc6c0; /* Color of the switch button */
+    border-radius: 50%;
+    transition: 0.4s linear;
+}
+
+input:checked + .slider {
+    background-color: #525252; /* Background color when the toggle is in the 'on' position */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color:#3cc6c0;
+}
+
+/* style for table  */
+.dark {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+#cryptoData {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+/* style for realStates */
+
+.realStates{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 20px;
+}
+
+.bestPriceToTrade{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.utilityClass1{
+    color:#3cc6c0;
+    font-weight: 700;
+    font-size: larger;
+}
+.utilityClass2{
+    color:#b6b6b6;
+    font-weight: 500;
+    font-size: medium;
+}
+/* style for table */
+table {
+    border-collapse: collapse;
+    height:max-content;
+    width: 100vw;
+    min-width: 700px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #c0c0c0;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+   
+}
+
+.dark tr:nth-child(even) {
+    background-color: #333;
+}
+.dark tr:nth-child(odd) {
+    background-color: #7d7676;
+}
+
+.dark th {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.dark td {
+    color: #fff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
